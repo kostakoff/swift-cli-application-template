@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 #echo "🧪  Test Swift packages..."
 
 echo "🧪  Test Swift packages..."

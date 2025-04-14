@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 #echo "📦  Updating Swift packages..."
 #swift package update
 

@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [ "master", "develop" ]
+
+jobs:
+  ci:
+    runs-on: macos-15
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build swift application
+      shell: bash
+      run: |
+        ./distribute.sh
+    - name: Sonarqube scan
+      shell: bash
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      run: |
+        ./sonar.sh
